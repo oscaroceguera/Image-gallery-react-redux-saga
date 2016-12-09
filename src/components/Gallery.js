@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as GalleryActions from './actions.js'
+import * as GalleryActions from '../actions/actions.js'
 
 const flickrImages = [
   "https://farm2.staticflickr.com/1553/25266806624_fdd55cecbc.jpg",

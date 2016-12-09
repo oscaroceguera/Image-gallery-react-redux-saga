@@ -1,4 +1,4 @@
-import {fetchImages} from './flickr';
+import {fetchImages} from '../api/flickr';
 import {put, take, fork} from 'redux-saga/effects';
 
 export function* loadImages() {

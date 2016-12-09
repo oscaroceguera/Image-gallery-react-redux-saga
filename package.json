@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "budo ./src/main.js:build.js --dir ./src --verbose --live -- -t babelify",
-    "test": "babel-node ./src/saga.spec.js | tap-spec"
+    "test": "babel-node ./src/sagas/sagas.spec.js | tap-spec"
   },
   "repository": {
     "type": "git",

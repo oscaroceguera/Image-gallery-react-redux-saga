@@ -6,10 +6,10 @@ import { createStore, applyMiddleware } from 'redux'
 import {Provider} from 'react-redux';
 import createSagaMiddleware from 'redux-saga'
 
-import Gallery from './Gallery'
-import reducer from './reducer'
+import Gallery from './components/Gallery'
+import reducer from './redcucers/reducer'
 
-import {watchForLoadImages} from './watchForLoadImages';
+import {watchForLoadImages} from './sagas/watchForLoadImages';
 
 const store = createStore(
   reducer,
