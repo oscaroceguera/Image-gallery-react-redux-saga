@@ -1,17 +1,22 @@
-import 'babel-polyfill'
+import "babel-polyfill"
 
 import React from 'react'
-import ReactDom from 'react-dom'
-import Gallery from './Gallery'
+import ReactDOM from 'react-dom'
+import { createStore, applyMiddleware } from 'redux'
+import {Provider} from 'react-redux';
+import createSagaMiddleware from 'redux-saga'
 
-import { createStore } from 'redux'
+import Gallery from './Gallery'
 import reducer from './reducer'
 
-const store = createStore(reducer)
+import {loadImages} from './sagas';
 
-import { Provider } from 'react-redux'
+const store = createStore(
+  reducer,
+  applyMiddleware(createSagaMiddleware(loadImages))
+);
 
-ReactDom.render(
+ReactDOM.render(
   <Provider store={store}>
     <Gallery />
   </Provider>,
